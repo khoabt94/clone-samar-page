@@ -1,0 +1,152 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default:
+Medium:
+Semi-bold:
+Bold: 
+
+- Line heights
+Default:
+Small:
+Medium:
+Paragraph default:
+Large:
+
+- Letter spacing
+
+
+--- 02 COLORS
+
+- Primary: #f55f8d
+- Tints: #fef2f6
+- Shades: #f8ae56
+- Accents:
+- Greys
+
+--- 05 SHADOWS
+
+
+--- 06 BORDER-RADIUS
+
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #636363;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/************************************/
+/* GENRAL REUSABLE COMPONENTS */
+/************************************/
+
+.container {
+    max-width: 120rem;
+    padding: 0 1.6rem;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    /* column-gap: 6.4rem;
+    row-gap: 9.6rem; */
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);  
+}
+
+.grid--4-cols {
+    grid-template-columns: 6fr repeat(3, 5fr);
+}
+
+.btn {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    background: linear-gradient(to right,#f55f8d 0,#f8ae56 51%,#f55f8d 100%);
+    color: white;
+    line-height: 1.2rem;
+    padding: 2.4rem 3.6rem;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: inline-block;
+    background-size: 200%;
+}
+
+.btn:hover {
+    background-position: right center;
+}
+
+.nav-text {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+}
+
+.heading-primary {
+    font-size: 7rem;
+    line-height: 1.1;
+    font-weight: 900;
+    display: block;
+    color: #000;
+}
+
+.heading-secondary {
+    font-size: 6rem;
+    line-height: 1.2;
+    font-weight: 800;
+    display: block;
+    color: #000;
+}
+
+.heading-tertiary {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #f55f8d;
+    display: block;
+}
+
+.section--hidden {
+    opacity: 0;
+    transform: translateY(8rem);
+}
+
+section {
+    transition: all 0.8s;
+}
