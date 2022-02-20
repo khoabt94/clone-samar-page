@@ -153,12 +153,12 @@ const activeSticky = (entries) => {
 
 const optionObsSticky = {
     root: null,
-    threshold: 0.04,
+    threshold: 0.03,
     // rootMargin: '-10px',
 }
 
 const stickyObs = new IntersectionObserver(activeSticky, optionObsSticky)
-// stickyObs.observe(main)
+stickyObs.observe(main)
 
 // End <Sticky header>
 // ////////////////////////////////////////////////////

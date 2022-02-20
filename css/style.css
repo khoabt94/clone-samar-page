@@ -4,6 +4,10 @@
 
 .nav__over {
     transition: all 0.5s;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
 }
 
 .nav__container {
@@ -35,6 +39,7 @@
     position: relative;
     padding: 5.6rem 0;
     cursor: pointer;
+    transition: all 0.5s;
 }
 
 .nav__link {
@@ -45,13 +50,13 @@
 .nav__sublist {
     min-width: 220px;
     position: absolute;
-    top: 150px;
-    opacity: 0;
+    top: calc(100% + 20px);
+    visibility: hidden;
     background-color: white;
     box-shadow: 0px 1px 40px 0px rgb(0 0 0 / 10%);
     padding: 4px 0;
-    z-index: -1;
     transition: all 0.5s;
+    opacity: 0;
 }
 
 .nav__item:hover .nav__link {
@@ -64,9 +69,9 @@
 }
 
 .nav__item:hover .nav__sublist {
-    top: 127px;
+    top: 100%;
+    visibility:visible;
     opacity: 1;
-    z-index: 1000;
 }
 
 .nav__subitem {
@@ -125,14 +130,9 @@ nav ul li ul li:hover ul {
     background-color: #fff;
 }
 
-/* .nav__over.nav__sticky .nav__item {
+.nav__over.nav__sticky .nav__item {
     padding: 4rem 0;
-} */
-
-/* .nav__over.nav__sticky .nav__sublist {
-    z-index: -1;
-} */
-
+}
 
 
 /* **************************************** */
@@ -147,7 +147,7 @@ nav ul li ul li:hover ul {
     display: grid;
     grid-template-columns: 7fr 5fr;
     align-items: center;
-    padding-top: 6rem;
+    padding-top: 18rem;
 }
 
 .hero__content {
@@ -314,7 +314,12 @@ nav ul li ul li:hover ul {
 }
 
 .about__content {
-    gap: 3.2rem;
+    /* gap: 3.2rem; */
+    display: flex;
+}
+
+.about-left, .about-right {
+    width: 50%;
 }
 
 .about-right {
@@ -367,23 +372,30 @@ nav ul li ul li:hover ul {
 }
 
 .about__img {
-    position: absolute;
-    left: -80px;
-    background: url('../img/pic1.jpg') top center/cover no-repeat;
-    width: 960px;
-    height: 640px;
+    position: relative;
+    left: -80%;
+    width: 50vw;
+    /* height: 640px; */
+    /* border-radius: 0 100px 100px 0; */
+}
+
+.about__img-img {
     border-radius: 0 100px 100px 0;
+    width: 100%;
+    position: relative;
+    
 }
 
 .about__img::after {
     content: '';
     position: absolute;
-    width: 100%;
+    top: 0;
+    width: 50vw;
     height: 100%;
     border-radius: 0 100px 100px 0;
     background-color: #fef2f6;
     z-index: -1;
-    right: -20px;
+    right: -13px;
     transform: rotate(8deg);
 }
 
@@ -1662,7 +1674,7 @@ nav ul li ul li:hover ul {
     left: 10px;
     display: flex;
     gap: 10px;
-    z-index: 1000;
+    z-index: 999;
     flex-direction: column;
 }
 
